@@ -23,11 +23,11 @@ app.use(errorHandler);
 app.get('/', (req, res) => {
   res.json('Hello');
 });
-// app.use('/*');
+app.use('/*');
 
-// app.use('/*', (req, res) => {
-//   return res.status(401).json({ error: 'not found' });
-// });
+app.use('/*', (req, res) => {
+  return res.status(401).json({ error: 'not found' });
+});
 
 // app.post(
 //   '/sign-in',
