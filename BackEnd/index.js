@@ -42,6 +42,6 @@ app.use('/*', (req, res) => {
 //   }
 // );
 
-app.listen(PORT, () => {
-  console.log('the port is listening in 3000');
+app.listen(3001, () => {
+  console.log('the port is listening in 3001');
 });
