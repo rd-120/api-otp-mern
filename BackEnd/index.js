@@ -15,7 +15,7 @@ app.use(cors({
   }));
 
 app.use(express.json());
-const PORT = process.env.PORTI || 8000;
+const PORT = process.env.PORT || 8000;
 app.use('/api/user', userRouter);
 
 app.use(errorHandler);
@@ -23,7 +23,7 @@ app.use(errorHandler);
 app.get('/', (req, res) => {
   res.json('Hello');
 });
-app.use('/*');
+// app.use('/*');
 
 app.use('/*', (req, res) => {
   return res.status(401).json({ error: 'not found' });
