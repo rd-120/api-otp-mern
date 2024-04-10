@@ -7,14 +7,11 @@ require('dotenv').config();
 const { errorHandler } = require('./middlewares/error');
 const cors = require('cors');
 const app = express();
-app.use(cors(
-{
+app.use(cors({
   origin: ["https://api-otp-mern-fronend.vercel.app"],
   methods: ["POST","GET"],
-  credentials: true
-    
- }
-));
+  credentials: true}));
+
 app.use(express.json());
 const PORT = process.env.PORT || 800;
 app.use('/api/user', userRouter);
