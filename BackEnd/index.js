@@ -15,7 +15,7 @@ app.use(cors({
   }));
 
 app.use(express.json());
-// const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 app.use('/api/user', userRouter);
 
 app.use(errorHandler);
@@ -42,6 +42,6 @@ app.get('/', (req, res) => {
 //   }
 // );
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('the port is listening in 3000');
 });
