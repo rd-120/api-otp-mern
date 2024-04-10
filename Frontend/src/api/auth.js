@@ -14,7 +14,7 @@ export const createUser = async (userInfo) => {
 
 export const verifyUserEmail = async (userInfo) => {
   try {
-    const { data } = await client.post('/user/verify-email', userInfo);
+    const { data } = await client.post('/verify-email', userInfo);
     return data;
   } catch (error) {
     const { response } = error;
