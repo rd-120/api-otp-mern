@@ -11,11 +11,11 @@ const app = express();
 app.use(cors({
     origin: ["https://api-otp-mern-fronend.vercel.app"],
     methods: ['POST', 'GET'],
-    credentials: true,
+    credentials: true
   }));
 
 app.use(express.json());
-// const PORT = process.env.PORT || 800;
+// const PORT = process.env.PORT || 8000;
 app.use('/api/user', userRouter);
 
 app.use(errorHandler);
