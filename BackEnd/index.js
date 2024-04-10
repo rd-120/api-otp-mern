@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors({
     origin: ["https://api-otp-mern-fronend.vercel.app"],
-    methods: ['POST', 'GET'],
+    methods: ['POST','GET'],
     credentials: true
   }));
 
